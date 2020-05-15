@@ -55,10 +55,10 @@ qtcreator-*
 /planning/docs
 /planning/src
 
-*~
+# *~
 
-# Emacs
-.#*
+# # Emacs
+# .#*
 
 # Catkin custom files
 CATKIN_IGNORE
