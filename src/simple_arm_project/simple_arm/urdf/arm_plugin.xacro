@@ -6,9 +6,9 @@
     xmlns:xacro="http://ros.org/wiki/xacro">
 
     <xacro:macro name="gzplugin_joint_control"
-    params="robot_components_namespace
-            trajectory_param_namespace
-            load_trajectory_server:=false">
+    params="robot_components_namespace">
+            <!-- trajectory_param_namespace
+            load_trajectory_server:=false"> -->
 
         <gazebo>
             <!-- Load the joint control plugin -->
@@ -35,7 +35,7 @@
             </plugin>  
 
             <!-- OPTIONAL: Load the joint trajectory server -->
-            <xacro:if value="${load_trajectory_server}">
+            <!-- <xacro:if value="${load_trajectory_server}">
             <plugin name="gzplugin_joint_trajectory_server" filename="libgazebo_joint_trajectory_server.so"> 
                 <robot_components_namespace>
                     ${robot_components_namespace} 
@@ -44,7 +44,7 @@
                     ${trajectory_param_namespace} 
                 </trajectory_param_namespace>
             </plugin>
-            </xacro:if>        
+            </xacro:if>         -->
         </gazebo>
     </xacro:macro>
 </root>           
